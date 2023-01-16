@@ -1,0 +1,12 @@
+{
+  "source": "/Users/lin/Documents/Coding/ci-IOS/AnyApp/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Hello, world!"
+      }
+    ]
+  },
+  "version": 1
+}

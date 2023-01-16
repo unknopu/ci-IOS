@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
+options: "bb63682f45c35aae4e73f787b021ac3b850e4412cf3b64672c558afa69873efb"
+build_start_time: [1673889207, 152933120]
+build_end_time: [1673889213, 705644130]
+inputs:
+  "/Users/lin/Documents/Coding/ci-IOS/AnyAppTests/AnyAppTests.swift": [1673887376, 440892696]

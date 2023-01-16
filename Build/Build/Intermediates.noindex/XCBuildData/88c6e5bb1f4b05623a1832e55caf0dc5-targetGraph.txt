@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+AnyApp in AnyApp, no dependencies
+AnyAppTests in AnyApp, depends on:
+AnyApp in AnyApp (explicit)
+AnyAppUITests in AnyApp, depends on:
+AnyApp in AnyApp (explicit)

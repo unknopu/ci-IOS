@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)"
+options: "135cbec0ffbe7245a5aa9cbf41e3f75041895e809f436ba0c4ea70b3a783869e"
+build_start_time: [1673889206, 127817153]
+build_end_time: [1673889213, 848822116]
+inputs:
+  "/Users/lin/Documents/Coding/ci-IOS/AnyApp/AnyAppApp.swift": [1673887376, 439574480]
+  "/Users/lin/Documents/Coding/ci-IOS/AnyApp/ContentView.swift": [1673887376, 440379381]

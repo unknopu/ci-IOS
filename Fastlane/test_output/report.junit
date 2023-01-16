@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='AnyAppUITests.xctest' tests='8' failures='0'>
+  <testsuite name='AnyAppTests.AnyAppTests' tests='2' failures='0'>
+    <testcase classname='AnyAppTests.AnyAppTests' name='testExample' time='0.002'/>
+    <testcase classname='AnyAppTests.AnyAppTests' name='testPerformanceExample' time='4.381'/>
+  </testsuite>
+  <testsuite name='AnyAppUITests.AnyAppUITests' tests='2' failures='0'>
+    <testcase classname='AnyAppUITests.AnyAppUITests' name='testExample' time='1.846'/>
+    <testcase classname='AnyAppUITests.AnyAppUITests' name='testLaunchPerformance' time='75.145'/>
+  </testsuite>
+  <testsuite name='AnyAppUITests.AnyAppUITestsLaunchTests' tests='4' failures='0'>
+    <testcase classname='AnyAppUITests.AnyAppUITestsLaunchTests' name='testLaunch' time='5.961'/>
+    <testcase classname='AnyAppUITests.AnyAppUITestsLaunchTests' name='testLaunch' time='5.229'/>
+    <testcase classname='AnyAppUITests.AnyAppUITestsLaunchTests' name='testLaunch' time='3.765'/>
+    <testcase classname='AnyAppUITests.AnyAppUITestsLaunchTests' name='testLaunch' time='5.284'/>
+  </testsuite>
+</testsuites>
