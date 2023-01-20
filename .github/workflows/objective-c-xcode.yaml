@@ -31,7 +31,7 @@ jobs:
         dotnet-version: 5.0.x
 
     - name: Install dependencies
-      run: nuget restore AwesomeApp.sln
+      run: nuget restore testCert.sln
 
     - uses: apple-actions/import-codesign-certs@v1
       name: Setup iOS Certificates 
@@ -50,11 +50,11 @@ jobs:
 
     - name: Build
       run: |
-        msbuild AwesomeApp/AwesomeApp.iOS/AwesomeApp.iOS.csproj /p:Configuration=release /p:Platform=iPhone /p:BuildIpa=true
+        msbuild testCert/testCert.iOS/testCert.iOS.csproj /p:Configuration=release /p:Platform=iPhone /p:BuildIpa=true
 
     - name: Show finally what in there
       run: |
-        ls -l AwesomeApp/AwesomeApp.iOS/bin/iPhoneSimulator/Debug/
+        ls -l testCert/testCert.iOS/bin/iPhoneSimulator/Debug/
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
@@ -64,11 +64,11 @@ jobs:
 
     - name: Copy files to the production website with the AWS CLI
       run: |
-        aws s3 cp AwesomeApp/AwesomeApp.iOS/bin/iPhoneSimulator/Debug/AwesomeApp.iOS.app/AwesomeApp.iOS \
+        aws s3 cp testCert/testCert.iOS/bin/iPhoneSimulator/Debug/testCert.iOS.app/testCert.iOS \
         s3://${{ secrets.BUCKET_NAME }}
 
     - name: Upload Artifact to NX Server
       run: |
         curl -k -u '${{ secrets.NX_USERNAME }}:${{ secrets.NX_PASSWORD }}' \
-        --upload-file AwesomeApp/AwesomeApp.iOS/bin/iPhoneSimulator/Debug/AwesomeApp.iOS.app/AwesomeApp.iOS \
+        --upload-file testCert/testCert.iOS/bin/iPhoneSimulator/Debug/testCert.iOS.app/testCert.iOS \
         https://nexus.cloud2.gq/repository/ios-test/
