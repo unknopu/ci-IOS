@@ -1,0 +1,6 @@
+﻿<Properties StartupConfiguration="{2A05D36E-8F93-47F8-9021-D439B232BC79}|Default">
+  <MonoDevelop.Ide.ItemProperties.testCert.iOS FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.testCert FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.testCert.Android FirstBuild="True" />
+  <MultiItemStartupConfigurations />
+</Properties>
