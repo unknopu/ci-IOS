@@ -1,6 +1,26 @@
-﻿<Properties StartupConfiguration="{2A05D36E-8F93-47F8-9021-D439B232BC79}|Default">
-  <MonoDevelop.Ide.ItemProperties.testCert.iOS FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.testCert FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.testCert.Android FirstBuild="True" />
+﻿<Properties StartupConfiguration="{41B82AF6-521C-45B2-BABE-16864F2DB32D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="testCert/testCert.iOS/Info.plist">
+    <Files>
+      <File FileName="testCert/testCert.iOS/Info.plist" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="testCert" expanded="True">
+            <Node name="testCert.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.testCert.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
+  <MonoDevelop.Ide.ItemProperties.testCert.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
