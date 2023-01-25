@@ -29,4 +29,4 @@ jobs:
 
 
 
-          git clone https://linjrp:${{ secret.GITLAB_TOKEN }}@${{ env.GIT_PRIVATE }}
+          git clone https://linjrp:${{ secrets.GITLAB_TOKEN }}@${{ env.GIT_PRIVATE }}
