@@ -18,7 +18,7 @@ jobs:
       - name: CLONE FROM PUBLIC
         run: |
           git version
-          git clone ${{ GIT_REPO }}
+          git clone ${{ env.GIT_REPO }}
           cat ping/text
 
       - name: CLONE FROM PRIVATE
