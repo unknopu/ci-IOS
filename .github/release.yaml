@@ -60,6 +60,7 @@ jobs:
     - name: Build
       run: |
         msbuild demo/demo.iOS/demo.iOS.csproj /p:Configuration=Release /p:Platform=iPhone /p:BuildIpa=true
+        
     # - name: Configure AWS Credentials
     #   uses: aws-actions/configure-aws-credentials@v1
     #   with:
