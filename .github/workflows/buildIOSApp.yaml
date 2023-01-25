@@ -24,9 +24,6 @@ jobs:
       - name: CLONE FROM PRIVATE
         run: |
           git version
-          git clone ${{ env.GIT_PRIVATE }}
+          git clone https://linjrp:${{ secrets.GITLAB_TOKEN }}@${{ env.GIT_PRIVATE }}
           cat ping/text
 
-
-
-          git clone https://linjrp:${{ secrets.GITLAB_TOKEN }}@${{ env.GIT_PRIVATE }}
