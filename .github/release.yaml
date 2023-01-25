@@ -1,6 +1,9 @@
 name: Build Xamarin.iOS app
 
-on: [push]
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
 
 # permission can be added at job level or workflow level    
 permissions:
@@ -31,7 +34,7 @@ jobs:
         dotnet-version: 5.0.x
 
     - name: Install dependencies
-      run: nuget restore testCert.sln
+      run: nuget restore demo.sln
 
     - name: Install the Apple certificate and provisioning profile
       env:
@@ -56,7 +59,7 @@ jobs:
         ls -lth ~/Library/MobileDevice/Provisioning\ Profiles
     - name: Build
       run: |
-        msbuild testCert/testCert.iOS/testCert.iOS.csproj /p:Configuration=Release /p:Platform=iPhone /p:BuildIpa=true
+        msbuild demo/demo.iOS/demo.iOS.csproj /p:Configuration=Release /p:Platform=iPhone /p:BuildIpa=true
     # - name: Configure AWS Credentials
     #   uses: aws-actions/configure-aws-credentials@v1
     #   with:
