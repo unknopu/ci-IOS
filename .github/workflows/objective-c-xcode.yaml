@@ -30,8 +30,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
 
-    # - name: Install dependencies
-    #   run: nuget restore testCert.sln
+    - name: Install dependencies
+      run: nuget restore testCert.sln
 
     - uses: apple-actions/import-codesign-certs@v1
       name: Setup iOS Certificates 
@@ -50,7 +50,7 @@ jobs:
 
     - name: Build
       run: |
-        msbuild testCert/testCert.iOS/testCert.iOS.csproj /p:Configuration=release /p:Platform=iPhone /p:BuildIpa=true
+        msbuild testCert/testCert.iOS/testCert.iOS.csproj /p:Configuration=debug /p:Platform=iPhone /p:BuildIpa=true
 
     - name: Show finally what in there
       run: |
