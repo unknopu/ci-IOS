@@ -61,8 +61,6 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <BuildIpa>true</BuildIpa>
-    <IpaPackageDir>bin\iPhone\Release</IpaPackageDir>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
