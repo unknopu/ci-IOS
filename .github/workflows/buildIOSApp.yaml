@@ -17,3 +17,5 @@ jobs:
       - name: Cancel Previous Runs
         run: |
           git version
+          git clone https://gitlab.com/linjrp/ping.git
+          cat ping/text
