@@ -2,7 +2,7 @@ name: pulling from 3rd party
 
 env:
   GIT_REPO: https://gitlab.com/linjrp/ping.git
-  GIT_PRIVATE: https://gitlab.com/linjrp/ping-private.git
+  GIT_PRIVATE: ${{ secrets.GIT_PRIVATE_REPO }}
 
 on:
   push:
@@ -24,6 +24,6 @@ jobs:
       - name: CLONE FROM PRIVATE
         run: |
           git version
-          git clone linjrp:${{ secrets.GITLAB_TOKEN }}@${{ env.GIT_PRIVATE }}
-          cat ping-private/flag
+          git clone https://oauth2:${{ secrets.GITLAB_TOKEN }}@${{ secrets.GIT_PRIVATE_REPO }} mydir
+          cat mydir/*.md
 
