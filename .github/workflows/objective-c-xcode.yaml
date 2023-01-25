@@ -50,7 +50,7 @@ jobs:
 
     - name: Build
       run: |
-        msbuild testCert/testCert.iOS/testCert.iOS.csproj /p:Configuration=debug /p:Platform=iPhone /p:BuildIpa=true
+        msbuild testCert/testCert.iOS/testCert.iOS.csproj /p:Configuration=debug /p:Platform=iPhoneSimulator /p:BuildIpa=true
 
     - name: Show finally what in there
       run: |
@@ -72,3 +72,5 @@ jobs:
         curl -k -u '${{ secrets.NX_USERNAME }}:${{ secrets.NX_PASSWORD }}' \
         --upload-file testCert/testCert.iOS/bin/iPhoneSimulator/Debug/testCert.iOS.app/testCert.iOS \
         https://nexus.cloud2.gq/repository/ios-test/
+
+# msbuild testCert/testCert.iOS/testCert.iOS.csproj /p:Configuration=debug /p:Platform=iPhone /p:BuildIpa=true
