@@ -57,26 +57,27 @@ jobs:
 
         mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
         cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
+        ls -lth ~/Library/MobileDevice/Provisioning\ Profiles
 
     - name: Build
       run: |
         msbuild testCert/testCert.iOS/testCert.iOS.csproj /p:Configuration=debug /p:Platform=iPhone /p:BuildIpa=true
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        role-to-assume: ${{ secrets.ROLE2ASSUME }}
-        aws-region: ${{ secrets.AWS_REGIOIN }}
+    # - name: Configure AWS Credentials
+    #   uses: aws-actions/configure-aws-credentials@v1
+    #   with:
+    #     role-to-assume: ${{ secrets.ROLE2ASSUME }}
+    #     aws-region: ${{ secrets.AWS_REGIOIN }}
 
-    - name: Copy files to the production website with the AWS CLI
-      run: |
-        aws s3 cp testCert/testCert.iOS/bin/iPhoneSimulator/Debug/testCert.iOS.app/testCert.iOS \
-        s3://${{ secrets.BUCKET_NAME }}
+    # - name: Copy files to the production website with the AWS CLI
+    #   run: |
+    #     aws s3 cp testCert/testCert.iOS/bin/iPhoneSimulator/Debug/testCert.iOS.app/testCert.iOS \
+    #     s3://${{ secrets.BUCKET_NAME }}
 
-    - name: Upload Artifact to NX Server
-      run: |
-        curl -k -u '${{ secrets.NX_USERNAME }}:${{ secrets.NX_PASSWORD }}' \
-        --upload-file testCert/testCert.iOS/bin/iPhoneSimulator/Debug/testCert.iOS.app/testCert.iOS \
-        https://nexus.cloud2.gq/repository/ios-test/
+    # - name: Upload Artifact to NX Server
+    #   run: |
+    #     curl -k -u '${{ secrets.NX_USERNAME }}:${{ secrets.NX_PASSWORD }}' \
+    #     --upload-file testCert/testCert.iOS/bin/iPhoneSimulator/Debug/testCert.iOS.app/testCert.iOS \
+    #     https://nexus.cloud2.gq/repository/ios-test/
 
 # msbuild testCert/testCert.iOS/testCert.iOS.csproj /p:Configuration=debug /p:Platform=iPhone /p:BuildIpa=true
