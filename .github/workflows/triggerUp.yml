@@ -18,16 +18,15 @@ jobs:
     runs-on: macos-latest
     
     steps:
+    - uses: actions/checkout@v2
+      name: Set default Xamarin SDK versions
+
     - name: Show what in there
       run: |
-        ls -lth
         git clone https://oauth2:${{ secrets.GIT_TOKEN }}@${{ env.GIT_REPO }} demo
         ls -lth
         cd demo
-    
-    
-    - uses: actions/checkout@v2
-      name: Set default Xamarin SDK versions
+        ls -lth
     
     - uses: maxim-lobanov/setup-xcode@v1
       name: Set default Xcode latest
