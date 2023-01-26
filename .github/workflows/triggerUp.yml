@@ -25,8 +25,6 @@ jobs:
       run: |
         git clone https://oauth2:${{ secrets.GIT_TOKEN }}@${{ env.GIT_REPO }} demo
         ls -lth
-        cd demo
-        ls -lth
     
     - uses: maxim-lobanov/setup-xcode@v1
       name: Set default Xcode latest
@@ -39,7 +37,7 @@ jobs:
         dotnet-version: 5.0.x
 
     - name: Install dependencies
-      run: nuget restore demo.sln
+      run: nuget restore ./demo/demo.sln
 
     - name: Install the Apple certificate and provisioning profile
       env:
