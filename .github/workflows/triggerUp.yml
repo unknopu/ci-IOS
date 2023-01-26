@@ -18,7 +18,7 @@ jobs:
     - name: Show what in there
       run: |
         ls -lth
-        git clone https://oauth2:${{ secrets.GITLAB_TOKEN }}@${{ secrets.GIT_PRIVATE_REPO }}
+        git clone https://oauth2:${{ secrets.GIT_TOKEN }}@us-south.git.cloud.ibm.com/nimble/devsecops/poc/xamarin-app.git
         ls -lth
     
     
