@@ -23,10 +23,10 @@ jobs:
 
     - name: Show what in there
       run: |
-        git clone https://oauth2:${{ secrets.GIT_TOKEN }}@${{ env.GIT_REPO }} demo
+        git clone https://oauth2:${{ secrets.GIT_TOKEN }}@${{ env.GIT_REPO }} app
         ls -lth
         rm README.md
-        mv ./demo/* .
+        mv ./app/* .
     
     - uses: maxim-lobanov/setup-xcode@v1
       name: Set default Xcode latest
