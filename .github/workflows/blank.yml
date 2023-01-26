@@ -1,6 +1,7 @@
-name: Build Xamarin.iOS app
+name: Build Xamarin app
 
 on:
+  repository_dispatch:
   push:
     branches: [ "main" ]
 
