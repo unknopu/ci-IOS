@@ -3,8 +3,8 @@ name: Build Xamarin app
 on:
   workflow_dispatch:
   repository_dispatch:
-  push:
-    branches: [ "main" ]
+  # push:
+  #   branches: [ "main" ]
 
 # permission can be added at job level or workflow level    
 permissions:
