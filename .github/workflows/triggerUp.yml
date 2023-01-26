@@ -25,6 +25,7 @@ jobs:
       run: |
         git clone https://oauth2:${{ secrets.GIT_TOKEN }}@${{ env.GIT_REPO }} demo
         ls -lth
+        rm README.md
         mv ./demo/* .
     
     - uses: maxim-lobanov/setup-xcode@v1
