@@ -65,6 +65,11 @@ jobs:
     - name: Build
       run: |
         msbuild demo/demo.iOS/demo.iOS.csproj /p:Configuration=Release /p:Platform=iPhone /p:BuildIpa=true
+    
+    - name: Build with Clean
+      uses: AutoModality/action-clean@v1
+      
+    - run: ls -lath
         
     # - name: Configure AWS Credentials
     #   uses: aws-actions/configure-aws-credentials@v1
