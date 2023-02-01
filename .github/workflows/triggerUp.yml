@@ -62,9 +62,10 @@ jobs:
         mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
         cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
         ls -lth ~/Library/MobileDevice/Provisioning\ Profiles
-    - name: Build
-      run: |
-        msbuild demo/demo.iOS/demo.iOS.csproj /p:Configuration=Release /p:Platform=iPhone /p:BuildIpa=true
+        
+    #- name: Build
+    #  run: |
+    #    msbuild demo/demo.iOS/demo.iOS.csproj /p:Configuration=Release /p:Platform=iPhone /p:BuildIpa=true
     
     - name: Build with Clean
       uses: AutoModality/action-clean@v1
